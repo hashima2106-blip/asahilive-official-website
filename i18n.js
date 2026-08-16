@@ -1,116 +1,266 @@
-/* =========================================
-   ASAHILIVE INTERNATIONALIZATION SYSTEM
-   JP / ID / EN
-   ========================================= */
-
 window.I18N = {
-
-  /* =======================================
-     JAPANESE
-     ======================================= */
-
   ja: {
+    heroEyebrow: "ASAHILIVE VIRTUAL ENTERTAINMENT",
+    heroTitle: "異なる光、ひとつの宇宙。",
+    heroSub: "それぞれの物語が交差する場所。",
+    explore: "世界へ入る",
 
-    heroEyebrow:
-      "ASAHILIVE VIRTUAL ENTERTAINMENT",
+    talents: "TALENTS",
+    talentsSub: "Project Dawn — Generation 0",
+    viewProfile: "プロフィールを見る",
 
-    heroTitle:
-      "異なる光、ひとつの宇宙。",
+    dawn: "PROJECT DAWN",
+    dawnSub: "GENERATION 0",
+    dawnLead: "三つの光が、ひとつの夜明けをつくる。",
+    readLore: "物語を読む",
 
-    heroSub:
-      "それぞれの物語が交差する場所。",
-
-    explore:
-      "世界へ入る",
-
-    talents:
-      "TALENTS",
-
-    talentsSub:
-      "Project Dawn — Generation 0",
-
-    viewProfile:
-      "プロフィールを見る",
-
-    dawn:
-      "PROJECT DAWN",
-
-    dawnSub:
-      "GENERATION 0",
-
-    dawnLead:
-      "三つの光が、ひとつの夜明けをつくる。",
-
-    readLore:
-      "物語を読む",
-
-    universe:
-      "ASAHILIVE UNIVERSE",
-
+    universe: "ASAHILIVE UNIVERSE",
     universeText:
       "個性、物語、そしてライブエンターテインメント。ここから新しい物語が始まります。",
 
-    news:
-      "NEWS & EVENTS",
+    news: "NEWS & EVENTS",
 
-    about:
-      "ABOUT ASAHILIVE",
-
+    about: "ABOUT ASAHILIVE",
     aboutText:
       "異なる個性を尊重し、ひとつの宇宙で新しい物語を創るバーチャルエンターテインメント。",
 
-    fans:
-      "FAN COMMUNITY",
+    fans: "FAN COMMUNITY",
+    fanName: "ファンネーム",
+    fanMark: "ファンマーク",
+    officialColors: "公式カラー",
 
-    fanName:
-      "ファンネーム",
-
-    fanMark:
-      "ファンマーク",
-
-    officialColors:
-      "公式カラー",
-
-    guide:
-      "UNIVERSE GUIDE",
-
+    guide: "UNIVERSE GUIDE",
     guideIntro:
       "AsahiLiveとProject Dawnについて質問してください。",
-
     guidePlaceholder:
       "例：Project Dawnとは？",
+    ask: "質問する",
 
-    ask:
-      "質問する",
+    close: "閉じる",
+    jpPrimary: "日本語をメイン言語として表示中",
 
-    close:
-      "閉じる",
+    footer: "© ASAHILIVE. All rights reserved.",
 
-    jpPrimary:
-      "日本語をメイン言語として表示中",
+    menu: "メニュー",
+    socials: "SOCIALS",
 
-    footer:
-      "© ASAHILIVE. All rights reserved.",
-
-    menu:
-      "メニュー",
-
-    socials:
-      "SOCIALS",
-
-    auditions:
-      "AUDITIONS",
-
+    auditions: "AUDITIONS",
     auditionsText:
       "新しい物語を一緒につくる仲間を募集中。",
-
-    learnMore:
-      "詳しく見る"
-
+    learnMore: "詳しく見る"
   },
 
+  id: {
+    heroEyebrow: "ASAHILIVE VIRTUAL ENTERTAINMENT",
+    heroTitle: "Cahaya yang berbeda, satu semesta.",
+    heroSub: "Tempat berbagai cerita bertemu.",
+    explore: "Masuk ke Universe",
 
-  /* =======================================
+    talents: "TALENTS",
+    talentsSub: "Project Dawn — Generation 0",
+    viewProfile: "Lihat profil",
+
+    dawn: "PROJECT DAWN",
+    dawnSub: "GENERATION 0",
+    dawnLead: "Tiga cahaya, satu fajar.",
+    readLore: "Baca lore",
+
+    universe: "ASAHILIVE UNIVERSE",
+    universeText:
+      "Kepribadian, cerita, dan live entertainment. Sebuah cerita baru dimulai dari sini.",
+
+    news: "NEWS & EVENTS",
+
+    about: "ABOUT ASAHILIVE",
+    aboutText:
+      "Hiburan virtual yang merayakan perbedaan dan menciptakan cerita baru dalam satu semesta.",
+
+    fans: "FAN COMMUNITY",
+    fanName: "Nama Fan",
+    fanMark: "Fan Mark",
+    officialColors: "Warna Resmi",
+
+    guide: "UNIVERSE GUIDE",
+    guideIntro:
+      "Tanyakan tentang AsahiLive atau Project Dawn.",
+    guidePlaceholder:
+      "Contoh: Apa itu Project Dawn?",
+    ask: "Tanya",
+
+    close: "Tutup",
+    jpPrimary: "Bahasa utama: Jepang",
+
+    footer: "© ASAHILIVE. Seluruh hak dilindungi.",
+
+    menu: "Menu",
+    socials: "SOSIAL",
+
+    auditions: "AUDISI",
+    auditionsText:
+      "Kami mencari talenta baru untuk menciptakan cerita bersama.",
+    learnMore: "Selengkapnya"
+  },
+
+  en: {
+    heroEyebrow: "ASAHILIVE VIRTUAL ENTERTAINMENT",
+    heroTitle: "Different lights, one universe.",
+    heroSub: "Where different stories cross paths.",
+    explore: "Enter the Universe",
+
+    talents: "TALENTS",
+    talentsSub: "Project Dawn — Generation 0",
+    viewProfile: "View profile",
+
+    dawn: "PROJECT DAWN",
+    dawnSub: "GENERATION 0",
+    dawnLead: "Three lights. One dawn.",
+    readLore: "Read lore",
+
+    universe: "ASAHILIVE UNIVERSE",
+    universeText:
+      "Personality, stories, and live entertainment. A new story begins here.",
+
+    news: "NEWS & EVENTS",
+
+    about: "ABOUT ASAHILIVE",
+    aboutText:
+      "Virtual entertainment that celebrates individuality and creates new stories within one universe.",
+
+    fans: "FAN COMMUNITY",
+    fanName: "Fan name",
+    fanMark: "Fan mark",
+    officialColors: "Official colors",
+
+    guide: "UNIVERSE GUIDE",
+    guideIntro:
+      "Ask anything about AsahiLive or Project Dawn.",
+    guidePlaceholder:
+      "Example: What is Project Dawn?",
+    ask: "Ask",
+
+    close: "Close",
+    jpPrimary: "Primary language: Japanese",
+
+    footer: "© ASAHILIVE. All rights reserved.",
+
+    menu: "Menu",
+    socials: "SOCIALS",
+
+    auditions: "AUDITIONS",
+    auditionsText:
+      "We are looking for new talents to create stories together.",
+    learnMore: "Learn more"
+  }
+};
+
+
+/* =========================================
+   LANGUAGE SYSTEM
+   ========================================= */
+
+const LANGUAGE_KEY = "asahilive-language";
+
+function currentLanguage() {
+  const saved = localStorage.getItem(LANGUAGE_KEY);
+
+  if (saved && window.I18N[saved]) {
+    return saved;
+  }
+
+  return "ja";
+}
+
+
+function setLanguage(lang) {
+
+  if (!window.I18N[lang]) {
+    lang = "ja";
+  }
+
+  localStorage.setItem(LANGUAGE_KEY, lang);
+
+  const dict = window.I18N[lang];
+
+  document.documentElement.lang = lang;
+
+  /* Text */
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+
+    const key = el.dataset.i18n;
+
+    if (dict[key] !== undefined) {
+      el.textContent = dict[key];
+    }
+
+  });
+
+
+  /* Placeholder */
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+
+    const key = el.dataset.i18nPlaceholder;
+
+    if (dict[key] !== undefined) {
+      el.placeholder = dict[key];
+    }
+
+  });
+
+
+  /* Language button */
+  const langBtn = document.querySelector("#langBtn");
+
+  if (langBtn) {
+
+    const labels = {
+      ja: "JP",
+      id: "ID",
+      en: "EN"
+    };
+
+    langBtn.innerHTML =
+      `${labels[lang] || "JP"} <span>⌄</span>`;
+
+  }
+
+
+  /* Re-render talents after language change */
+  if (typeof renderTalents === "function") {
+    renderTalents();
+  }
+
+
+  /* Update guide answer */
+  const chatAnswer = document.querySelector("#chatAnswer");
+
+  if (chatAnswer) {
+
+    const messages = {
+      ja:
+        "Project Dawn、タレント、Lore、Fan Communityについて質問できます。",
+
+      id:
+        "Tanyakan tentang Project Dawn, Ren, Yuna, Akira, atau fan community.",
+
+      en:
+        "Try asking about Project Dawn, Ren, Yuna, Akira, or the fan community."
+    };
+
+    chatAnswer.textContent = messages[lang];
+  }
+
+}
+
+
+/* =========================================
+   INITIAL LANGUAGE
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  setLanguage(currentLanguage());
+
+});  /* =======================================
      INDONESIAN
      ======================================= */
 
