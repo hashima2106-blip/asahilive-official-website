@@ -15,18 +15,21 @@ window.addEventListener("load", () => {
 
   document.body.classList.add("loaded");
 
-  setLanguage(currentLanguage());
+  // Language
+  if (
+    typeof setLanguage === "function" &&
+    typeof currentLanguage === "function"
+  ) {
+    setLanguage(currentLanguage());
+  }
 
+  // Render website
   renderTalents();
-
   renderCommunity();
-
   renderNavigation();
-
   observeReveal();
 
 });
-
 
 /* =========================================
    HEADER SCROLL
@@ -156,25 +159,45 @@ $$("a[href^='#']").forEach((link) => {
 
 function renderTalents() {
 
-  const grid = $("#talentGrid");
+  const grid = document.getElementById("talentGrid");
 
-  if (!grid) return;
+  if (!grid) {
+    console.error("ASAHILIVE: #talentGrid tidak ditemukan.");
+    return;
+  }
 
+  // Pastikan data.js berhasil dimuat
   if (
-    typeof ASAHI === "undefined" ||
-    !Array.isArray(ASAHI.talents)
+    !window.ASAHI ||
+    !Array.isArray(window.ASAHI.talents)
   ) {
 
+    console.error(
+      "ASAHILIVE: Data talent tidak ditemukan.",
+      window.ASAHI
+    );
+
     grid.innerHTML = `
-      <p class="empty-message">
-        Talent data is currently unavailable.
-      </p>
+      <div class="empty-message">
+        <p>Talent data is currently unavailable.</p>
+      </div>
     `;
 
     return;
-
   }
 
+  const talents = window.ASAHI.talents;
+
+  if (talents.length === 0) {
+
+    grid.innerHTML = `
+      <div class="empty-message">
+        <p>No talents available.</p>
+      </div>
+    `;
+
+    return;
+  }
 
   const lang =
     typeof currentLanguage === "function"
@@ -182,7 +205,7 @@ function renderTalents() {
       : "ja";
 
 
-  grid.innerHTML = ASAHI.talents.map((talent) => {
+  grid.innerHTML = talents.map((talent) => {
 
     const short =
       talent.short?.[lang] ||
@@ -191,7 +214,6 @@ function renderTalents() {
 
 
     return `
-
       <article
         class="talent-card reveal"
         style="--accent:${talent.color || "#ffffff"}"
@@ -204,6 +226,7 @@ function renderTalents() {
             src="${talent.image}"
             alt="${talent.name}"
             loading="lazy"
+            onerror="this.style.display='none'"
           >
 
         </div>
@@ -212,16 +235,13 @@ function renderTalents() {
         <div class="tc-copy">
 
           <div class="tc-type">
-
             ${talent.type || ""}
-
             ${talent.role ? " · " + talent.role : ""}
-
           </div>
 
 
           <h3>
-            ${talent.name}
+            ${talent.name || ""}
           </h3>
 
 
@@ -231,14 +251,11 @@ function renderTalents() {
 
 
           <span class="profile-link">
-
             ${
               window.I18N?.[lang]?.viewProfile ||
               "View profile"
             }
-
             ↗
-
           </span>
 
         </div>
@@ -249,27 +266,32 @@ function renderTalents() {
         </div>
 
       </article>
-
     `;
 
   }).join("");
 
 
-  $$(".talent-card").forEach((card) => {
+  document
+    .querySelectorAll(".talent-card")
+    .forEach((card) => {
 
-    card.addEventListener("click", () => {
+      card.addEventListener("click", () => {
 
-      openTalent(card.dataset.id);
+        openTalent(card.dataset.id);
+
+      });
 
     });
-
-  });
 
 
   observeReveal();
 
-}
+  console.log(
+    "ASAHILIVE: Talent berhasil dirender:",
+    talents
+  );
 
+}
 
 /* =========================================
    TALENT MODAL
