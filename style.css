@@ -18,3 +18,20 @@ footer{padding:50px 7vw 30px;background:#05050d}.footer-top,.footer-bottom{max-w
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes load{0%{transform:scaleX(0);opacity:.2}50%{transform:scaleX(1);opacity:1}100%{transform:scaleX(0);opacity:.2}}@keyframes drift{from{background-position:0 0}to{background-position:850px 850px}}
 @media(max-width:900px){.desktop-nav{display:none}.menu-btn{display:block}.hero{min-height:900px;padding:150px 7vw 70px;display:block}.hero-content{width:100%;max-width:600px}.hero-visual{top:330px;right:0;width:100%;height:560px;opacity:.55}.hero-content{z-index:5}.hero h1{font-size:clamp(45px,13vw,78px)}.talent-grid,.news-grid{grid-template-columns:1fr}.talent-card{min-height:600px}.universe-grid,.about-layout,.guide-panel{grid-template-columns:1fr;gap:45px}.community-grid{grid-template-columns:1fr}.dawn-section{min-height:650px}.dawn-content{align-self:end;padding-bottom:70px}.dawn-content h2{font-size:19vw}.guide-panel{padding:35px}.footer-top,.footer-bottom{flex-wrap:wrap}.footer-links{width:100%;margin:20px 0 0}.talent-modal-card{grid-template-columns:1fr;max-height:90vh}.modal-image{min-height:340px;height:340px}.modal-copy{padding:30px}.modal-copy h2{font-size:34px}}
 @media(max-width:520px){.site-header{height:68px;padding:0 18px}.brand span{display:none}.section{padding:90px 18px}.hero{padding-left:18px;padding-right:18px}.hero-visual{top:390px;height:450px}.section-head{gap:15px}.section-head .line{display:none}.about-copy p{font-size:20px}.guide-section{padding:80px 18px}.cta-section{padding:80px 18px}.cta-inner{display:block}.cta-inner .cta{margin-top:10px}.footer-top,.footer-bottom{padding-left:0;padding-right:0}.footer-links{gap:15px}}
+/* ASAHILIVE DEBUG - FORCE CONTENT VISIBLE */
+.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.hero,
+.hero-content,
+.hero-copy,
+.hero-text,
+.hero-title,
+.hero-subtitle,
+.hero-eyebrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
