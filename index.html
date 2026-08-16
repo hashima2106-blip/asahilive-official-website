@@ -1,116 +1,1148 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#070719">
-<meta name="description" content="ASAHILIVE — Different Lights, One Universe.">
-<title>ASAHILIVE | Virtual Entertainment</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#060612"
+  >
+
+  <meta
+    name="description"
+    content="ASAHILIVE — Different Lights, One Universe."
+  >
+
+  <title>ASAHILIVE | Virtual Entertainment</title>
+
+  <!-- Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Mobile / Hero improvements -->
+  <style>
+
+    /* =========================================
+       ASAHILIVE HERO IMPROVEMENT
+       ========================================= */
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-visual {
+      pointer-events: none;
+    }
+
+    .hero-poster {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Project Dawn title enhancement */
+    .hero-title-project {
+      display: block;
+      font-size: 0.32em;
+      letter-spacing: 0.35em;
+      color: #b9b0ff;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .hero-main-title {
+      display: block;
+    }
+
+    .hero-description {
+      max-width: 520px;
+    }
+
+    /* =========================================
+       MOBILE
+       ========================================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        min-height: 920px;
+        padding-top: 125px;
+        padding-bottom: 70px;
+        display: block;
+      }
+
+      .hero-content {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .hero-content .eyebrow {
+        justify-content: center;
+      }
+
+      .hero-content h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-content .cta {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        position: absolute;
+        top: 355px;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: 94vw;
+        max-width: 700px;
+        height: 570px;
+
+        opacity: 1;
+      }
+
+      .hero-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        filter:
+          drop-shadow(0 25px 60px rgba(100,70,255,.45));
+      }
+
+      .poster-glow {
+        width: 65%;
+        height: 35%;
+        opacity: .28;
+      }
+
+      .scroll-cue {
+        bottom: 20px;
+      }
+    }
+
+    /* =========================================
+       SMALL PHONES
+       ========================================= */
+
+    @media (max-width: 520px) {
+
+      .site-header {
+        height: 68px;
+        padding: 0 18px;
+      }
+
+      .hero {
+        min-height: 850px;
+        padding:
+          105px
+          18px
+          55px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size:
+          clamp(
+            48px,
+            15vw,
+            72px
+          );
+
+        line-height: .95;
+      }
+
+      .hero-content p {
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .hero-visual {
+        top: 330px;
+        width: 105vw;
+        height: 470px;
+      }
+
+      .hero-poster {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-orbit.orbit-a {
+        width: 130vw;
+        height: 55vw;
+        right: -55vw;
+        top: 35vh;
+      }
+
+      .hero-orbit.orbit-b {
+        width: 110vw;
+        height: 48vw;
+        right: -35vw;
+        top: 45vh;
+      }
+    }
+
+    /* =========================================
+       TALENT SECTION
+       ========================================= */
+
+    .talent-section {
+      position: relative;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(100,80,220,.10),
+          transparent 40%
+        );
+    }
+
+    .talent-grid {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================================
+       PROJECT DAWN SECTION
+       ========================================= */
+
+    .dawn-section {
+      position: relative;
+    }
+
+    .dawn-art img {
+      transition: transform 1.5s ease;
+    }
+
+    .dawn-section:hover .dawn-art img {
+      transform: scale(1.025);
+    }
+
+    /* =========================================
+       ACCESSIBILITY
+       ========================================= */
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<div id="preloader"><div class="preloader-core"><img src="assets/asahilive-logo.png" alt="AsahiLive"><div class="loader-line"></div><span>ASAHILIVE UNIVERSE</span></div></div>
 
-<header class="site-header" id="header">
-  <a class="brand" href="#top"><img src="assets/asahilive-logo.png" alt="ASAHILIVE"><span>ASAHILIVE</span></a>
-  <nav class="desktop-nav" id="nav"></nav>
-  <div class="header-actions">
-    <button class="lang-btn" id="langBtn">JP <span>⌄</span></button>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu"><i></i><i></i></button>
-  </div>
-  <div class="lang-menu" id="langMenu"><button data-lang="ja">日本語</button><button data-lang="id">Indonesia</button><button data-lang="en">English</button></div>
-</header>
+  <!-- =========================================
+       PRELOADER
+       ========================================= -->
 
-<main id="top">
-<section class="hero">
-  <div class="hero-bg"></div><div class="stars"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
-  <div class="hero-content reveal">
-    <div class="eyebrow" data-i18n="heroEyebrow"></div>
-    <h1 data-i18n="heroTitle"></h1>
-    <p data-i18n="heroSub"></p>
-    <a class="cta" href="#dawn"><span data-i18n="explore"></span><b>↗</b></a>
-  </div>
-  <div class="hero-visual">
-    <img src="assets/project-dawn-key-visual.png" alt="Project Dawn" class="hero-poster">
-    <div class="poster-glow"></div>
-  </div>
-  <div class="scroll-cue"><span>SCROLL</span><i></i></div>
-</section>
+  <div id="preloader">
 
-<section class="section talent-section" id="talents">
-  <div class="section-head reveal"><div><span class="kicker">01</span><h2 data-i18n="talents"></h2><p data-i18n="talentsSub"></p></div><div class="line"></div></div>
-  <div class="talent-grid" id="talentGrid"></div>
-</section>
+    <div class="preloader-core">
 
-<section class="dawn-section" id="dawn">
-  <div class="dawn-art"><img src="assets/project-dawn-wide.png" alt="Project Dawn"></div>
-  <div class="dawn-overlay"></div>
-  <div class="dawn-content reveal">
-    <span class="kicker">02 · <span data-i18n="dawnSub"></span></span>
-    <h2 data-i18n="dawn"></h2>
-    <p class="lead" data-i18n="dawnLead"></p>
-    <div class="dawn-symbols"><span>✦</span><span>◌</span><span>✧</span></div>
-    <button class="ghost-btn" id="loreBtn"><span data-i18n="readLore"></span> <b>↗</b></button>
-  </div>
-</section>
+      <img
+        src="assets/asahilive-logo.png"
+        alt="AsahiLive"
+      >
 
-<section class="section universe-section">
-  <div class="universe-grid">
-    <div class="universe-copy reveal"><span class="kicker">03</span><h2 data-i18n="universe"></h2><p data-i18n="universeText"></p><div class="universe-ring"></div></div>
-    <div class="universe-cards">
-      <article class="info-card reveal"><span>01</span><h3>Stories</h3><p>Character lore and worlds designed to grow with every stream.</p></article>
-      <article class="info-card reveal"><span>02</span><h3>Live</h3><p>Streaming, music, gaming, collaboration and memorable moments.</p></article>
-      <article class="info-card reveal"><span>03</span><h3>Community</h3><p>A welcoming space where fans become part of the story.</p></article>
+      <div class="loader-line"></div>
+
+      <span>
+        ASAHILIVE UNIVERSE
+      </span>
+
     </div>
+
   </div>
-</section>
 
-<section class="section community-section">
- <div class="section-head reveal"><div><span class="kicker">04</span><h2 data-i18n="fans"></h2></div><div class="line"></div></div>
- <div class="community-grid">
-   <div class="community-card reveal"><small data-i18n="fanName"></small><strong id="fanName"></strong></div>
-   <div class="community-card reveal"><small data-i18n="fanMark"></small><strong id="fanMark"></strong></div>
-   <div class="community-card reveal colors-card"><small data-i18n="officialColors"></small><div id="colorDots"></div></div>
- </div>
-</section>
 
-<section class="section about-section" id="about">
- <div class="about-layout">
-  <div class="about-title reveal"><span class="kicker">05</span><h2 data-i18n="about"></h2></div>
-  <div class="about-copy reveal"><p data-i18n="aboutText"></p><div class="mini-stat"><b>PROJECT DAWN</b><span>GENERATION 0</span></div></div>
- </div>
-</section>
+  <!-- =========================================
+       HEADER
+       ========================================= -->
 
-<section class="section news-section">
- <div class="section-head reveal"><div><span class="kicker">06</span><h2 data-i18n="news"></h2></div><div class="line"></div></div>
- <div class="news-grid">
-   <article class="news-card reveal"><div class="news-date">ASAHILIVE</div><h3>Project Dawn — Generation 0</h3><p>Three lights begin a shared story.</p><span>↗</span></article>
-   <article class="news-card reveal"><div class="news-date">UNIVERSE</div><h3>Welcome to the AsahiLive Universe</h3><p>A new chapter is waiting beyond the stars.</p><span>↗</span></article>
-   <article class="news-card reveal"><div class="news-date">COMING SOON</div><h3>More stories are on the horizon</h3><p>Follow the official channels for updates.</p><span>↗</span></article>
- </div>
-</section>
+  <header
+    class="site-header"
+    id="header"
+  >
 
-<section class="guide-section" id="guide">
- <div class="guide-panel reveal">
-  <div class="guide-copy"><span class="kicker">07</span><h2 data-i18n="guide"></h2><p data-i18n="guideIntro"></p></div>
-  <div class="guide-chat">
-    <div class="chat-answer" id="chatAnswer">Ask about Project Dawn, the talents, lore, fan name, or AsahiLive.</div>
-    <div class="chat-input"><input id="guideInput" data-i18n-placeholder="guidePlaceholder"><button id="askBtn" data-i18n="ask">Ask</button></div>
+    <a
+      class="brand"
+      href="#top"
+      aria-label="ASAHILIVE Home"
+    >
+
+      <img
+        src="assets/asahilive-logo.png"
+        alt="ASAHILIVE"
+      >
+
+      <span>
+        ASAHILIVE
+      </span>
+
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      id="nav"
+      aria-label="Main navigation"
+    ></nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="lang-btn"
+        id="langBtn"
+        type="button"
+        aria-label="Language"
+      >
+        JP
+        <span>⌄</span>
+      </button>
+
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Menu"
+      >
+
+        <i></i>
+        <i></i>
+
+      </button>
+
+    </div>
+
+
+    <div
+      class="lang-menu"
+      id="langMenu"
+    >
+
+      <button data-lang="ja">
+        日本語
+      </button>
+
+      <button data-lang="id">
+        Indonesia
+      </button>
+
+      <button data-lang="en">
+        English
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN
+       ========================================= -->
+
+  <main id="top">
+
+
+    <!-- =======================================
+         HERO
+         ======================================= -->
+
+    <section class="hero">
+
+      <div class="hero-bg"></div>
+
+      <div class="stars"></div>
+
+      <div class="hero-orbit orbit-a"></div>
+
+      <div class="hero-orbit orbit-b"></div>
+
+
+      <div class="hero-content reveal">
+
+        <div
+          class="eyebrow"
+          data-i18n="heroEyebrow"
+        ></div>
+
+
+        <h1>
+
+          <span class="hero-title-project">
+            ASAHILIVE
+          </span>
+
+          <span
+            class="hero-main-title"
+            data-i18n="heroTitle"
+          ></span>
+
+        </h1>
+
+
+        <p
+          class="hero-description"
+          data-i18n="heroSub"
+        ></p>
+
+
+        <a
+          class="cta"
+          href="#dawn"
+        >
+
+          <span data-i18n="explore"></span>
+
+          <b>↗</b>
+
+        </a>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <img
+          src="assets/project-dawn-key-visual.png"
+          alt="Project Dawn Generation 0"
+          class="hero-poster"
+        >
+
+        <div class="poster-glow"></div>
+
+      </div>
+
+
+      <div class="scroll-cue">
+
+        <span>
+          SCROLL
+        </span>
+
+        <i></i>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         TALENTS
+         ======================================= -->
+
+    <section
+      class="section talent-section"
+      id="talents"
+    >
+
+      <div class="section-head reveal">
+
+        <div>
+
+          <span class="kicker">
+            01
+          </span>
+
+          <h2 data-i18n="talents"></h2>
+
+          <p data-i18n="talentsSub"></p>
+
+        </div>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <!--
+        app.js akan otomatis memasukkan
+        Amamiya Ren
+        Yuna Nanami
+        Kagami Akira
+        ke sini.
+      -->
+
+      <div
+        class="talent-grid"
+        id="talentGrid"
+      ></div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         PROJECT DAWN
+         ======================================= -->
+
+    <section
+      class="dawn-section"
+      id="dawn"
+    >
+
+      <div class="dawn-art">
+
+        <img
+          src="assets/project-dawn-wide.png"
+          alt="Project Dawn Generation 0"
+        >
+
+      </div>
+
+
+      <div class="dawn-overlay"></div>
+
+
+      <div class="dawn-content reveal">
+
+        <span class="kicker">
+
+          02 ·
+
+          <span data-i18n="dawnSub"></span>
+
+        </span>
+
+
+        <h2
+          data-i18n="dawn"
+        ></h2>
+
+
+        <p
+          class="lead"
+          data-i18n="dawnLead"
+        ></p>
+
+
+        <div class="dawn-symbols">
+
+          <span>✦</span>
+
+          <span>◌</span>
+
+          <span>✧</span>
+
+        </div>
+
+
+        <button
+          class="ghost-btn"
+          id="loreBtn"
+          type="button"
+        >
+
+          <span data-i18n="readLore"></span>
+
+          <b>↗</b>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         UNIVERSE
+         ======================================= -->
+
+    <section class="section universe-section">
+
+      <div class="universe-grid">
+
+
+        <div class="universe-copy reveal">
+
+          <span class="kicker">
+            03
+          </span>
+
+          <h2 data-i18n="universe"></h2>
+
+          <p data-i18n="universeText"></p>
+
+          <div class="universe-ring"></div>
+
+        </div>
+
+
+        <div class="universe-cards">
+
+
+          <article class="info-card reveal">
+
+            <span>01</span>
+
+            <h3>
+              Stories
+            </h3>
+
+            <p>
+              Character lore and worlds
+              designed to grow with every stream.
+            </p>
+
+          </article>
+
+
+          <article class="info-card reveal">
+
+            <span>02</span>
+
+            <h3>
+              Live
+            </h3>
+
+            <p>
+              Streaming, music, gaming,
+              collaboration and memorable moments.
+            </p>
+
+          </article>
+
+
+          <article class="info-card reveal">
+
+            <span>03</span>
+
+            <h3>
+              Community
+            </h3>
+
+            <p>
+              A welcoming space where fans
+              become part of the story.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         COMMUNITY
+         ======================================= -->
+
+    <section class="section community-section">
+
+      <div class="section-head reveal">
+
+        <div>
+
+          <span class="kicker">
+            04
+          </span>
+
+          <h2 data-i18n="fans"></h2>
+
+        </div>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="community-grid">
+
+
+        <div class="community-card reveal">
+
+          <small data-i18n="fanName"></small>
+
+          <strong id="fanName"></strong>
+
+        </div>
+
+
+        <div class="community-card reveal">
+
+          <small data-i18n="fanMark"></small>
+
+          <strong id="fanMark"></strong>
+
+        </div>
+
+
+        <div class="community-card colors-card reveal">
+
+          <small data-i18n="officialColors"></small>
+
+          <div id="colorDots"></div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         ABOUT ASAHILIVE
+         ======================================= -->
+
+    <section
+      class="section about-section"
+      id="about"
+    >
+
+      <div class="about-layout">
+
+
+        <div class="about-title reveal">
+
+          <span class="kicker">
+            05
+          </span>
+
+          <h2 data-i18n="about"></h2>
+
+        </div>
+
+
+        <div class="about-copy reveal">
+
+          <p data-i18n="aboutText"></p>
+
+
+          <div class="mini-stat">
+
+            <b>
+              PROJECT DAWN
+            </b>
+
+            <span>
+              GENERATION 0
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         NEWS
+         ======================================= -->
+
+    <section class="section news-section">
+
+      <div class="section-head reveal">
+
+        <div>
+
+          <span class="kicker">
+            06
+          </span>
+
+          <h2 data-i18n="news"></h2>
+
+        </div>
+
+        <div class="line"></div>
+
+      </div>
+
+
+      <div class="news-grid">
+
+
+        <article class="news-card reveal">
+
+          <div class="news-date">
+            ASAHILIVE
+          </div>
+
+          <h3>
+            Project Dawn — Generation 0
+          </h3>
+
+          <p>
+            Three lights begin a shared story.
+          </p>
+
+          <span>↗</span>
+
+        </article>
+
+
+        <article class="news-card reveal">
+
+          <div class="news-date">
+            UNIVERSE
+          </div>
+
+          <h3>
+            Welcome to the AsahiLive Universe
+          </h3>
+
+          <p>
+            A new chapter is waiting beyond the stars.
+          </p>
+
+          <span>↗</span>
+
+        </article>
+
+
+        <article class="news-card reveal">
+
+          <div class="news-date">
+            COMING SOON
+          </div>
+
+          <h3>
+            More stories are on the horizon
+          </h3>
+
+          <p>
+            Follow the official channels for updates.
+          </p>
+
+          <span>↗</span>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         UNIVERSE GUIDE
+         ======================================= -->
+
+    <section
+      class="guide-section"
+      id="guide"
+    >
+
+      <div class="guide-panel reveal">
+
+
+        <div class="guide-copy">
+
+          <span class="kicker">
+            07
+          </span>
+
+          <h2 data-i18n="guide"></h2>
+
+          <p data-i18n="guideIntro"></p>
+
+        </div>
+
+
+        <div class="guide-chat">
+
+          <div
+            class="chat-answer"
+            id="chatAnswer"
+          >
+            Ask about Project Dawn,
+            the talents, lore, fan name,
+            or AsahiLive.
+          </div>
+
+
+          <div class="chat-input">
+
+            <input
+              id="guideInput"
+              type="text"
+              data-i18n-placeholder="guidePlaceholder"
+              autocomplete="off"
+            >
+
+
+            <button
+              id="askBtn"
+              type="button"
+              data-i18n="ask"
+            >
+              Ask
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================
+         FINAL CTA
+         ======================================= -->
+
+    <section class="cta-section">
+
+      <div class="cta-inner reveal">
+
+
+        <div>
+
+          <span class="kicker">
+            08
+          </span>
+
+          <h2 data-i18n="auditions"></h2>
+
+          <p data-i18n="auditionsText"></p>
+
+        </div>
+
+
+        <a
+          href="#footer"
+          class="cta"
+        >
+
+          <span data-i18n="learnMore"></span>
+
+          <b>↗</b>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer id="footer">
+
+    <div class="footer-top">
+
+
+      <img
+        src="assets/asahilive-logo.png"
+        alt="ASAHILIVE"
+      >
+
+
+      <div>
+
+        <strong>
+          ASAHILIVE
+        </strong>
+
+        <span>
+          Different Lights, One Universe.
+        </span>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#talents">
+          Talents
+        </a>
+
+        <a href="#dawn">
+          Project Dawn
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span data-i18n="footer"></span>
+
+      <span>
+        JP · ID · EN
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       TALENT MODAL
+       ========================================= -->
+
+  <div
+    class="talent-modal"
+    id="talentModal"
+  >
+
+    <div
+      class="modal-backdrop"
+      data-close
+    ></div>
+
+
+    <div class="talent-modal-card">
+
+
+      <button
+        class="modal-close"
+        data-close
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-image">
+
+        <img
+          id="modalImg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="modal-copy">
+
+        <span
+          class="kicker"
+          id="modalType"
+        ></span>
+
+
+        <h2 id="modalName"></h2>
+
+
+        <h4 id="modalRole"></h4>
+
+
+        <p id="modalShort"></p>
+
+
+        <div
+          class="tags"
+          id="modalTags"
+        ></div>
+
+
+        <hr>
+
+
+        <p id="modalLore"></p>
+
+      </div>
+
+
+    </div>
+
   </div>
- </div>
-</section>
 
-<section class="cta-section">
- <div class="cta-inner reveal"><div><span class="kicker">08</span><h2 data-i18n="auditions"></h2><p data-i18n="auditionsText"></p></div><a href="#footer" class="cta"><span data-i18n="learnMore"></span><b>↗</b></a></div>
-</section>
-</main>
 
-<footer id="footer">
- <div class="footer-top"><img src="assets/asahilive-logo.png" alt="ASAHILIVE"><div><strong>ASAHILIVE</strong><span>Different Lights, One Universe.</span></div><div class="footer-links"><a href="#talents">Talents</a><a href="#dawn">Project Dawn</a><a href="#about">About</a></div></div>
- <div class="footer-bottom"><span data-i18n="footer"></span><span>JP · ID · EN</span></div>
+
+  <!-- =========================================
+       TOAST
+       ========================================= -->
+
+  <div
+    class="to
+  ></div>
+
+
+
+  <!-- =========================================
+       JAVASCRIPT
+       ========================================= -->
+
+  <script src="data.js"></script>
+
+  <script src="i18n.js"></script>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+  </html> <div class="footer-bottom"><span data-i18n="footer"></span><span>JP · ID · EN</span></div>
 </footer>
 
 <div class="talent-modal" id="talentModal"><div class="modal-backdrop" data-close></div><div class="talent-modal-card"><button class="modal-close" data-close>×</button><div class="modal-image"><img id="modalImg"></div><div class="modal-copy"><span class="kicker" id="modalType"></span><h2 id="modalName"></h2><h4 id="modalRole"></h4><p id="modalShort"></p><div class="tags" id="modalTags"></div><hr><p id="modalLore"></p></div></div></div>
